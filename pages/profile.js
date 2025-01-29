@@ -2,6 +2,7 @@ import UserProfile from '../components/profile/user-profile';
 import { getSession } from 'next-auth/react';
 
 function ProfilePage(props) {
+  
 
   return <UserProfile />;
 }
