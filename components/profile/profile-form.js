@@ -15,6 +15,11 @@ function ProfileForm(props) {
     props.onChangePassword({
       oldPassword:enteredOldPassword,
       newPassword:enteredNewPassword
+    }).then((data)=>{ 
+      if(data){
+        oldpasswordRef.current.value = '';
+        newpasswordRef.current.value = '';
+      }
     })
 
   }

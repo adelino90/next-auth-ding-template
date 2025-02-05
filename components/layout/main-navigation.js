@@ -11,7 +11,7 @@ function MainNavigation() {
   return (
     <header className={classes.header}>
       <Link href="/">
-        <div className={classes.logo}>Next Auth</div>
+        <div className={classes.logo}>External Government Agency v1.0 </div>
       </Link>
       <nav>
         <ul>
@@ -24,6 +24,9 @@ function MainNavigation() {
             <>
               <li>
                 <Link href="/profile">Profile</Link>
+              </li>
+              <li>
+                <Link href="/agencies">Government Agency Library</Link>
               </li>
               <li>
                 <button onClick={logoutHandler}>Logout</button>

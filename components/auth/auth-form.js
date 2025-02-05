@@ -3,6 +3,7 @@ import {signIn} from 'next-auth/react'
 import classes from './auth-form.module.css';
 import { redirect } from 'next/dist/server/api-utils';
 import {useRouter} from 'next/router';
+import { toast } from 'react-hot-toast';
 
 async function createUser(email,password){
   const response = await fetch('/api/auth/signup',{
@@ -36,11 +37,16 @@ function AuthForm() {
 
     //validation in front end: optional
     if (isLogin){
-
+      const toastId = toast.loading('Loading...');
       const result = await signIn('credentials',{redirect: false,email:enteredEmail,password:enteredPassword})
       if (result.ok){
-        router.replace('/profile')
+        toast.success('Login Successfull!');
+        router.replace('/agencies')
       }
+      else{
+        toast.error(result.error);
+      }
+      toast.dismiss(toastId)
 
     }else{
       try{      

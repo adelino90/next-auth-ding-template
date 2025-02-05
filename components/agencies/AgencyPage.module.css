@@ -1,0 +1,100 @@
+/* AgencyPage.module.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.container h1  {
+    text-align: center;
+    color: #333;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;  /* Align label and inputs better */
+}
+
+.filters label {
+    font-weight: bold; /* Make label text bold */
+    color: #333; /* Dark text color */
+    font-size: 16px; /* Slightly larger font size */
+    margin-right: 10px; /* Add space between label and select input */
+}
+.filters select, .filters input {
+    height: 40px; /* Ensure filter input has the same height */
+}
+
+.container select,
+.container input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Styles for Modify button */
+.list li button {
+    padding: 6px 12px;
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.list li button:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+.list li button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue outline on focus */
+}
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Adjust padding for better proportion */
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; /* Adjust font size for consistency */
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+    height: 40px; /* Match filter input height */
+    width: auto; /* Let width adjust based on content */
+    min-width: 200px; /* Ensure the button width is consistent with the filter input */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue outline on focus */
+}
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
